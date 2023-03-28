@@ -18,6 +18,7 @@ function PopularBooksYear() {
 
   return (
     <Container>
+      <hr ></hr>
       <h1>Popular Books By Years</h1>
       <Grid container spacing={2}>
         {books_year.filter(book => book['Year-Of-Publication'] < 2006 || book['Year-Of-Publication'] > 2021).map(book => (

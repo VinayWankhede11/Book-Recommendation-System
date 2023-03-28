@@ -78,33 +78,46 @@ function Search() {
             <Grid item xs={3} >
               <TextField label="Number of Results" type="number" min="1" value={numResults} onChange={handleNumResultsChange} fullWidth />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={1}>
               <Button variant="contained" color="primary" type="submit">Submit</Button>
             </Grid>
           </Grid>
         </form>
       </Grid>
       <Grid item xs={12}>
-        <Card sx={{ maxWidth: 300}}  >
-        {books.map(book => (
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="300"
-          image={book.image} alt={book.book_name}
-        />
-        <CardContent  key={book.book_name} sx={{maxHeight:150}}>
-          <Typography gutterBottom variant="h5" component="div">
-            <h4>{book.book_name}</h4>
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-              <p>Author: {book.author}</p>
-              {/* <p>Rating: {book.rating}</p> */}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-       ))}
-    </Card>
+        <Grid container spacing={2}>
+        {books.slice(0,4).map(book => (
+          <Grid item key={book.book_name} xs={12} sm={6} lg={3}>
+            <Card sx={{ maxWidth: 350 }}>
+              <CardContent sx={{ maxHeight:500,height: 500,backgroundColor:'rgb(0, 30, 60)',color:'#00BFFF',borderRadius:'15px',}}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={book.image} alt={book.book_name}
+                  sx={{
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    transition: 'transform 0.3s ease',
+                    '&:hover': {
+                      transform: 'scale(1.06)',
+                    },
+                  }}
+                />
+                <Typography variant="h5" component="div"
+                  sx={{
+                  textAlign: 'center',
+                  padding: '10px 0',
+                  }}>
+                  <h4>{book.book_name}</h4>
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center',color:'#1E90FF' }}>
+                  <p>Author: {book.author}</p>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
       </Grid>
     </Grid>
     </Container>

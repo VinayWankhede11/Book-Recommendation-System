@@ -18,6 +18,7 @@ function PopularBooks() {
 
   return (
     <Container>
+      <hr></hr>
       <h1>Popular Books</h1>
       <Grid container spacing={2}>
         {books.slice(0, 8).map(book => (
