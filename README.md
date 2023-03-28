@@ -70,7 +70,7 @@ project/
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/1EmZiGC1Z7mXQmZ5eAAUJ8z0OGuWCPkOx/preview)
+![App Screenshot]([https://drive.google.com/file/d/1EmZiGC1Z7mXQmZ5eAAUJ8z0OGuWCPkOx/preview](https://github.com/VinayWankhede11/Book-Recommendation-System/blob/main/Book%20SS.png))
 
 
 ## Features
