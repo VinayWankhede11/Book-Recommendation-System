@@ -75,7 +75,7 @@ project/
 
 ## Features
 
-- KNN model based recomendation 
+- KNN model based recomendation
 - Popular books by Year, All time.
 - Responsive Frontend in React.js.
 - Search based book recomendation based on author, publisher.
@@ -88,3 +88,4 @@ project/
 **Server:** ![FASTAPI](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)  ![Scikit-Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white) ,![Numpy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white), pickle, uvicorn
 
 **Deployment** ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+
