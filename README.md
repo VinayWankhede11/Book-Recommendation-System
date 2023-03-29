@@ -17,19 +17,6 @@ Go to the project directory
   cd book-recommendation
 ```
 
-Building docker image for frontend
-
-```bash
-  cd frontend
-  docker build -t frontend .
-```
-Building docker image for backend
-
-```bash
-  cd backend
-  docker build -t backend .
-```
-
 Start the application using Docker Compose:
 
 ```bash
