@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18.12.1-alpine3.16
+FROM node:18-buster-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -15,9 +15,3 @@ COPY . .
 
 # Build the React app
 RUN npm run build
-
-# Expose the port that the server will listen on
-EXPOSE 3000
-
-# Start the server
-CMD ["npm", "start"]

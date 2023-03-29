@@ -47,8 +47,8 @@ function PopularBooks() {
                   <h4>{book['Book-Title']}</h4>
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center',color:'#1E90FF' }}>
-                  <p>Author: {book['Book-Author']}</p>
-                  <p>Rating: {book['Book-Rating']}</p>
+                  <Typography>Author: {book['Book-Author']}</Typography>
+                  <Typography>Rating: {book['Book-Rating']}</Typography>
                 </Typography>
               </CardContent>
             </Card>

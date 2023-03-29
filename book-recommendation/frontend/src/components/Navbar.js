@@ -16,7 +16,7 @@ function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 0 }}
           >
             <MenuIcon />
           </IconButton>

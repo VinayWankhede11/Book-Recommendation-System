@@ -7,14 +7,13 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActionArea  from '@mui/material/CardActionArea';
 import Typography  from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 function Search() {
   const [searchOption, setSearchOption] = useState('title');
   const [bookName, setBookName] = useState('');
-  const [numResults, setNumResults] = useState(5);
+  const [numResults, setNumResults] = useState(4);
   const [books, setBooks] = useState([]);
 
   const handleSubmit = async (e) => {

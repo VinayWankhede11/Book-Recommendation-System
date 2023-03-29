@@ -46,10 +46,8 @@ function PopularBooksYear() {
                   }}>
                   <h4>{book['Book-Title']}</h4>
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center',color:'#1E90FF' }}>
-                  <p>Author: {book['Book-Author']}</p>
-                  <p>Year: {book['Year-Of-Publication']}</p>
-                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center',color:'#1E90FF' }}>Author: {book['Book-Author']}</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center',color:'#1E90FF' }}>Year: {book['Year-Of-Publication']}</Typography>
               </CardContent>
             </Card>
           </Grid>

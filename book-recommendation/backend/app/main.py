@@ -7,17 +7,17 @@ import pickle
 from sklearn.neighbors import NearestNeighbors
 import os
 pathFile = str (os.path.dirname(os.path.abspath(__file__)))
+print(pathFile)
 
-with open(pathFile+'../../matrix.pkl', 'rb') as f:
+with open(pathFile+'/matrix.pkl', 'rb') as f:
     matrix = pickle.load(f)
-with open(pathFile+'../../model.pkl', 'rb') as f:
+with open(pathFile+'/model.pkl', 'rb') as f:
     model = pickle.load(f)
-with open(pathFile+'../../explicit_dataset.pkl', 'rb') as f:
+with open(pathFile+'/explicit_dataset.pkl', 'rb') as f:
     explicit_dataset = pickle.load(f)
-
-with open(pathFile+'../../popular.pkl', 'rb') as f:
+with open(pathFile+'/popular.pkl', 'rb') as f:
     popular_df = pickle.load(f)
-with open(pathFile+'../../popular_year.pkl', 'rb') as f:
+with open(pathFile+'/popular_year.pkl', 'rb') as f:
     popular_year_df = pickle.load(f)
 
 
@@ -67,18 +67,21 @@ def get_booksPublisher(dataframe, name, n):
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 @app.route('/recommendKNN', methods=['POST'])
 def recommend():
     # Get the book name from the POST request
-    book_name = request.json.get('book_name')
-    ans  = funcpred(book_name)
-    data= {}
-    data["books"] = ans
-    print(jsonify(data))
-    return jsonify(data)
+    try:
+        book_name = request.json.get('book_name')
+        ans  = funcpred(book_name)
+        data= {}
+        data["books"] = ans
+        print(jsonify(data))
+        return jsonify(data)
+    except:
+        return print("Error")
 
 @app.route('/getAuthor', methods=['POST'])
 def recommendAuthor():

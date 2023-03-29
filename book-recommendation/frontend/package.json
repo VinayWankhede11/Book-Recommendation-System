@@ -2,7 +2,7 @@
   "name": "book-recommendation",
   "version": "0.1.0",
   "private": false,
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "http://backend:5000",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

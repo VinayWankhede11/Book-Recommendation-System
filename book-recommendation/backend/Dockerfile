@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.12.0a6-alpine3.17
+FROM python:3.9-slim-buster
 
 # Set the working directory in the container
 WORKDIR /app
@@ -13,8 +13,3 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
 
-# Expose the port that the server will listen on
-EXPOSE 8000
-
-# Start the server
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
