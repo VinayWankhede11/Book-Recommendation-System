@@ -16,6 +16,21 @@ Go to the project directory
 ```bash
   cd book-recommendation
 ```
+Go to the frontend
+
+```bash
+  cd frontend
+```
+Install node modules
+
+```bash
+  npm install
+```
+
+Return back to base dir 
+```bash
+  cd..
+```
 
 Start the application using Docker Compose:
 
