@@ -56,6 +56,7 @@ def get_booksAuthor(dataframe, name, n):
         k2 = data[data['Book-Author'] == unique_author[0]]
     k2 = k2.sort_values(by=['Book-Rating'])
     return printBook(k2, n)
+
 def get_booksPublisher(dataframe, name, n):
     unique_author = dataframe['Publisher'].unique()
     data = explicit_dataset [explicit_dataset ['Book-Title'] != name]

@@ -15,3 +15,5 @@ COPY . .
 
 # Build the React app
 RUN npm run build
+
+
