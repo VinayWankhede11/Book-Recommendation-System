@@ -108,7 +108,7 @@ function Search() {
         </Grid>
         <Grid item xs={12}>
           <Grid container spacing={2}>
-            {books.slice(0, 4).map((book) => (
+            {books?.slice(0, 4).map((book) => (
               <Grid item key={book.book_name} xs={12} sm={6} lg={3}>
                 <Card sx={{ maxWidth: 500 }}>
                   <CardContent
